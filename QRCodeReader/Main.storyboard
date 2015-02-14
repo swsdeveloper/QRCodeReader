@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ElC-Y0-7hg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yt8-Ek-WE9">
+            <objects>
+                <viewController id="ElC-Y0-7hg" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v5H-3s-3Ki"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZgB-dH-9lc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mWe-OD-xFl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code Reader is not yet running…" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgg-Cm-vmp">
+                                <rect key="frame" x="44" y="444" width="512" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="GbL-DK-AQF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqk-9o-tcU">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="iPT-75-car"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ILm-1t-teB"/>
+                                    <barButtonItem title="Start!" id="JD9-zb-DNJ">
+                                        <connections>
+                                            <action selector="startStopReading:" destination="ElC-Y0-7hg" id="hGT-PF-36t"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NAd-J8-hhP"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bM-ma-tKi">
+                                <rect key="frame" x="44" y="28" width="512" height="399"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Start! to read a QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ezf-tf-I1a">
+                                        <rect key="frame" x="20" y="179" width="473" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="z9n-n7-KGZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ezf-tf-I1a" firstAttribute="centerY" secondItem="3bM-ma-tKi" secondAttribute="centerY" id="H4A-37-hCT"/>
+                                    <constraint firstItem="Ezf-tf-I1a" firstAttribute="centerX" secondItem="3bM-ma-tKi" secondAttribute="centerX" id="Tdy-FC-OPa"/>
+                                    <constraint firstItem="Ezf-tf-I1a" firstAttribute="leading" secondItem="3bM-ma-tKi" secondAttribute="leading" constant="20" id="fhb-uy-FHT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.64941702570000004" blue="0.66287195320000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lgg-Cm-vmp" firstAttribute="centerX" secondItem="mWe-OD-xFl" secondAttribute="centerX" id="H3Y-rJ-xmj"/>
+                            <constraint firstItem="yqk-9o-tcU" firstAttribute="leading" secondItem="mWe-OD-xFl" secondAttribute="leading" id="HuE-y2-4eh"/>
+                            <constraint firstItem="lgg-Cm-vmp" firstAttribute="top" secondItem="3bM-ma-tKi" secondAttribute="bottom" constant="20" id="LWk-Up-4s1"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yqk-9o-tcU" secondAttribute="bottom" id="TXx-2I-ge1"/>
+                            <constraint firstItem="lgg-Cm-vmp" firstAttribute="top" secondItem="3bM-ma-tKi" secondAttribute="bottom" constant="17" id="VXP-Qy-Pro"/>
+                            <constraint firstItem="3bM-ma-tKi" firstAttribute="leading" secondItem="mWe-OD-xFl" secondAttribute="leadingMargin" constant="28" id="W6G-l5-IZw"/>
+                            <constraint firstItem="yqk-9o-tcU" firstAttribute="top" secondItem="lgg-Cm-vmp" secondAttribute="bottom" constant="17" id="dxG-51-Nfl"/>
+                            <constraint firstItem="lgg-Cm-vmp" firstAttribute="trailing" secondItem="3bM-ma-tKi" secondAttribute="trailing" id="hdg-2u-qo2"/>
+                            <constraint firstItem="3bM-ma-tKi" firstAttribute="top" secondItem="v5H-3s-3Ki" secondAttribute="bottom" constant="8" symbolic="YES" id="j44-8V-2vq"/>
+                            <constraint firstItem="lgg-Cm-vmp" firstAttribute="leading" secondItem="3bM-ma-tKi" secondAttribute="leading" id="l3t-mh-KKM"/>
+                            <constraint firstItem="lgg-Cm-vmp" firstAttribute="centerX" secondItem="yqk-9o-tcU" secondAttribute="centerX" id="mg0-NC-r2J"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LWk-Up-4s1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bbitemStart" destination="JD9-zb-DNJ" id="5rp-0w-1un"/>
+                        <outlet property="lblStatus" destination="lgg-Cm-vmp" id="bjv-Wr-aWL"/>
+                        <outlet property="viewPreview" destination="3bM-ma-tKi" id="KqQ-mW-qYr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y34-d3-zDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="719"/>
+        </scene>
+    </scenes>
+</document>
